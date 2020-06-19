@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event Booking{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 4px;
+        }
+        .total { text-align: right;}
+    </style>
+
+    <div class="example-wrapper">
+        <p>Type employee name or event name or date to search</p>
+        <select id="searchId" name="searchItem">
+            <option value="Employee">Employee Name</option>
+            <option value="Event Name">Event Name</option>
+            <option value="Date">Date</option>
+        </select>
+        <input id="searchInput" type="text" placeholder="Search...">
+        <table id="tabledata" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>Participation number</th>
+                    <th>Employee</th>
+                    <th>Email</th>
+                    <th>Event Id</th>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Version</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tfoot>
+                    <tr>
+                        <th class="total" colspan="7">
+                            Total
+                        </th>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
